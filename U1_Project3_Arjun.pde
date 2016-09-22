@@ -6,6 +6,7 @@ int yDirection;
 int x = 50;
 int y = 500;
 int ySpeed = 16;
+int x2 = 400;
 
 void setup()
 {
@@ -30,13 +31,13 @@ void draw()
   line(data[6], 0, data[6], 150);
   
   strokeWeight(7);
-  line(data2[0], 500, data2[0], 1000);
-  line(data2[1], 300, data2[1], 1000);
-  line(data2[2], 400, data2[2], 1000);
-  line(data2[3], 400, data2[3], 1000);
-  line(data2[4], 350, data2[4], 1000);
-  line(data2[5], 500, data2[5], 1000);
-  line(data2[6], 250, data2[6], 1000);
+  line(data2[0], 525, data2[0], 1000);
+  line(data2[1], 325, data2[1], 1000);
+  line(data2[2], 425, data2[2], 1000);
+  line(data2[3], 425, data2[3], 1000);
+  line(data2[4], 375, data2[4], 1000);
+  line(data2[5], 525, data2[5], 1000);
+  line(data2[6], 275, data2[6], 1000);
   
   strokeWeight(1);
   fill(0,255,0);
@@ -59,5 +60,62 @@ void draw()
   {
     x = x + 2;
     y = y + 2;
+  }
+  
+  if (y == 400)
+  {
+    y = height;
+  }
+  else if (y == 525)
+  {
+    y = height;
+  }
+  else if (y == 200)
+  {
+    y = height;
+  }
+  else if (y == 325)
+  {
+    y = height;
+  }
+  else if (y == 300)
+  {
+    y = height;
+  }
+  else if (y == 425)
+  {
+    y = height;
+  }
+  else if (x == 300)
+  {
+    y = height;
+  }
+  else if (y == 425)
+  {
+    y = height;
+  }
+  else if (y == 250)
+  {
+    y = height;
+  }
+  else if (y == 375)
+  {
+    y = height;
+  }
+  else if (y == 400)
+  {
+    y = height;
+  }
+  else if (y == 525)
+  {
+    y = height;
+  }
+  else if (y == 150)
+  {
+    y = height;
+  }
+  else if (y  == 275)
+  {
+    y = height;
   }
 }
