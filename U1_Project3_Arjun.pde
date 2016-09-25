@@ -1,5 +1,12 @@
-float[] data = {190, 400, 750, 760, 950, 1050, 1300};
-float[] data2 = {190, 400, 750, 760, 950, 1050, 1300};
+// U3_Project3_Arjun
+// Flappy Bird Recreation by Arjun Khorana
+
+// This is my take on a recreation of Flappy Bird. To make the character jump, press 
+// the spacebar. When you hit the lines, you restart. The game will pause for 3 seconds,
+// before you can start again. 
+
+float[] data = {190, 400, 750, 760, 950, 1050, 1300}; //x positions of my top lines
+float[] data2 = {190, 400, 750, 760, 950, 1050, 1300}; //x positions for bottom lines
 int i = 1;
 float numLines = 100;
 int yDirection;
@@ -7,7 +14,6 @@ float x = width*0.05;
 float y = height*0.7;
 int ySpeed = 16;
 int score = 0;
-int s = second();
 
 void setup()
 {
@@ -23,8 +29,8 @@ void draw()
   background(51,123,255);
   
   strokeWeight(7);
-  line(data[0], height*0, data[0], height*0.4);
-  line(data[1], height*0, data[1], height*0.2);
+  line(data[0], height*0, data[0], height*0.4); // how long the lines are going to be 
+  line(data[1], height*0, data[1], height*0.2); // based on their y values
   line(data[2], height*0, data[2], height*0.3);
   line(data[3], height*0, data[3], height*0.3);
   line(data[4], height*0, data[4], height*0.25);
@@ -78,7 +84,7 @@ void draw()
     y = y + 2;
   }
   
-  if (collision())
+  if (collision()) // what happens when the character touches any of the lines
   {
     x = width*0.05;
     y = height*0.5;
@@ -103,12 +109,12 @@ void draw()
     
   }
   
-  if (noCollision())
+  if (noCollision()) //what happens when there is no collision with each of the lines
   {
     score = score + 1;    
   }
   
-  if (lines())
+  if (lines()) //what happens if the lines go out of the screen when moving
   {
     data[0] = width - 1;
     data2[0] = width - 1;  
@@ -150,7 +156,7 @@ void draw()
     data2[6] = width - 1;  
   }
  
-    data[0] = data[0] - 1;
+    data[0] = data[0] - 1; //shows that there will be moving lines
     data2[0] = data2[0] - 1;
     data[1] = data[1] - 1;
     data2[1] = data2[1] - 1;
@@ -167,7 +173,7 @@ void draw()
       
 }
   
-  boolean collision()
+  boolean collision() //when the collision will happen
   {
     boolean returnValue = false;
     {
@@ -181,7 +187,7 @@ void draw()
 return returnValue;
    }
  
-  boolean noCollision()
+  boolean noCollision() //when the collision will not happen
   {
     boolean returnValue = false;
     {
@@ -195,7 +201,7 @@ return returnValue;
     }
   }
   
-  boolean lines()
+  boolean lines() //shows what happens when the lines go out of the picture
   {
     boolean returnValue = false;
     {
