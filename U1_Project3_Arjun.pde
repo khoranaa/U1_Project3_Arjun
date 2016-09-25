@@ -5,8 +5,8 @@
 // the spacebar. When you hit the lines, you restart. The game will pause for 3 seconds,
 // before you can start again. 
 
-float[] data = {190, 400, 750, 760, 950, 1050, 1300}; //x positions of my top lines
-float[] data2 = {190, 400, 750, 760, 950, 1050, 1300}; //x positions for bottom lines
+float[] data = {width*2, width*3, width*5, width*7, width*9, width*11, width*13}; //x positions of my top lines
+float[] data2 = {width*2, width*3, width*5, width*7, width*9, width*11, width*13}; //x positions for bottom lines
 int i = 1;
 float numLines = 100;
 int yDirection;
@@ -86,26 +86,26 @@ void draw()
   
   if (collision()) // what happens when the character touches any of the lines
   {
+    delay(3000);
+    
     x = width*0.05;
     y = height*0.5;
     score = 0;
     
-    data[0]= 190;
-    data2[0] = 190;
-    data[1]= 400;
-    data2[1] = 400;
-    data[2]= 750;
-    data2[2] = 750;
-    data[3]= 760;
-    data2[3] = 760;
-    data[4]= 950;
-    data2[4] = 950;
-    data[5]= 1050;
-    data2[5] = 1050;
-    data[6]= 1300;
-    data2[6] = 1300;
-    
-    delay(3000);
+    data[0] = width*0.2;
+    data2[0] = width*0.2;
+    data[1]= width*0.3; //<>//
+    data2[1] = width*0.3;
+    data[2]= width*0.5;
+    data2[2] = width*0.5;
+    data[3]= width*0.7;
+    data2[3] = width*0.7;
+    data[4]= width*0.9;
+    data2[4] = width*0.9;
+    data[5]= width*1.1;
+    data2[5] = width*1.1;
+    data[6] = width*1.3;
+    data2[6] = width*1.3;
     
   }
   
